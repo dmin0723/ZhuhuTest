@@ -1,7 +1,9 @@
-package com.dengmin.zhuhutest;
+package com.dengmin.zhuhutest.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.dengmin.zhuhutest.R;
 
 public class MainActivity extends AppCompatActivity {
 
