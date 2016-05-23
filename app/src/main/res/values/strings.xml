@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">ZhuhuTest</string>
+
+    <string name="not_network">没有网络</string>
 </resources>

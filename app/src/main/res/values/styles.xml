@@ -8,4 +8,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="NewsListStyle">
+        <item name="android:background">#ffeeeeee</item>
+        <item name="android:divider">@null</item>
+    </style>
 </resources>
