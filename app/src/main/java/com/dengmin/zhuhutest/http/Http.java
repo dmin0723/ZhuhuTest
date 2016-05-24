@@ -8,6 +8,7 @@ import java.net.URL;
 
 /**
  * Created by dmin on 2016/5/23.
+ * 将存入的网址，解析成HTML格式
  */
 
     //这是参考了第一行代码的写法，也好比较好的封装类，可以直接使用
