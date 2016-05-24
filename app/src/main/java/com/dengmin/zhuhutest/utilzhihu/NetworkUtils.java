@@ -12,6 +12,7 @@ import com.dengmin.zhuhutest.utils.T;
  */
 public class NetworkUtils {
 
+    //已经有专门的封装好的工具类，来进行代替
     public static boolean checkNetworkConnection(Context context){
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activityNetwork = cm.getActiveNetworkInfo();
