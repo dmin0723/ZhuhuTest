@@ -1,13 +1,36 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <!-- old  parent="Theme.AppCompat.Light.DarkActionBar"-->
+    <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
         <!-- Customize your theme here. -->
+
+        <!-- Base application theme.
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorAccent</item> -->
+
     </style>
 
+    <!-- APP的主题 -->
+    <style name="CustomAppBarTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/MyActionBarStyle</item>
+    </style>
+
+    <!-- 标题的样式 -->
+    <style name="MyActionBarStyle" parent="@android:style/Widget.Holo.Light.ActionBar">
+        <item name="android:background">#0099cc</item>
+        <item name="android:logo">@android:color/transparent</item>
+        <item name="android:titleTextStyle">@style/MyActionBarTitleTextStyle</item>
+    </style>
+
+    <!-- 标题字体的样式 -->
+    <style name="MyActionBarTitleTextStyle" parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- 新闻类别形式 -->
     <style name="NewsListStyle">
         <item name="android:background">#ffeeeeee</item>
         <item name="android:divider">@null</item>

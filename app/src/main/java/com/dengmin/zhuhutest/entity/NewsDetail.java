@@ -8,6 +8,28 @@ import java.util.ArrayList;
 public class NewsDetail {
     //去查看相应的HTML页面，给到相应的解析 ?还没有去看
     //与loadNewsDeailTask 有关联
+    /**
+     * body : <div class="main-wrap content-wrap"><p>致敬是对某个桥段，某几个镜头，某个造型，某段对话高度复制，属于表达导演对自己偶像的敬仰，一般只有资深影迷才会发现。</p>blah blah</div>
+     * image_source : 《一步之遥》
+     * title : 致敬、恶搞、借鉴、模仿、抄袭，到底怎么区分？
+     * image : http://pic1.zhimg.com/930cf6f414db290556cd068235ff8f1c.jpg
+     * share_url : http://daily.zhihu.com/story/7815067
+     * js : []
+     * ga_prefix : 013010
+     * type : 0
+     * id : 7815067
+     * css : ["http://news-at.zhihu.com/css/news_qa.auto.css?v=77778"]
+     *
+     *
+     *  private String body;
+     private String image_source;
+     private String title;
+     private String image;
+     private String share_url;
+     @PrimaryKey
+     private int id;
+     private RealmList<RealmString> css;
+     */
 
     private String body;
     private String image_source;
@@ -15,9 +37,9 @@ public class NewsDetail {
     private String image;//头部图片
     private String share_url;
 
-    private ArrayList<String> js;
-    private int type;
-    private String ga_prefix;
+    private ArrayList<String> js;//可以不用
+    private int type;//可以不用
+    private String ga_prefix;//可以不用
     private long id;
     private ArrayList<String> css;
 

@@ -14,28 +14,30 @@ import java.util.List;
 /**
  * Created by dmin on 2016/5/23.
  * 将Http解析成的HTML语句看作成json，使用JsonHelper来解析json，从而显示出来
+ * 没有问题
  */
 public class JsonHelper {
 
     //与第一行代码有点不一样，后续继续试验
     //没有使用到Gson这个第三方库，后续进行优化
     public static List<News> parseJsonToList(String json) throws JSONException{
+        // json 对象 和 数组
         JSONObject newsContent = new JSONObject(json);
         JSONArray newsArray = newsContent.getJSONArray("stories");
 
+        //列表
         List<News> newsList = new ArrayList<News>();
 
         for (int i = 0;i < newsArray.length();i++){
+            //int id = newsInJson.getInt("id");//第一行代码使用的
             JSONObject newsInJson = newsArray.getJSONObject(i);
-
             int id = newsInJson.optInt("id");
-//            int id = newsInJson.getInt("id");//第一行代码使用的
             String title = newsInJson.optString("title");
             String image = "";
             if(newsInJson.has("image")){
-                image = (String)newsInJson.getJSONArray("image").get(0);
+                image = (String)newsInJson.getJSONArray("images").get(0);
             }
-
+            //单个新闻的初始化
             News news = new News(id,title,image);
             newsList.add(news);
         }

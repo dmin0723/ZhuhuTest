@@ -5,4 +5,7 @@
 
     <string name="action_start">收藏</string>
     <string name="action_setting">设置</string>
+    <string name="date_format">yyyy年M月d日 EEEE</string>
+    <string name="favorite">收藏夹</string>
+    <string name="refresh">刷新成功</string>
 </resources>
