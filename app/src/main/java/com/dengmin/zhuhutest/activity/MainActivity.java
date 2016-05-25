@@ -48,7 +48,7 @@ public class MainActivity extends Activity implements
         //列表
         lv = (ListView) findViewById(R.id.lv);
 
-        //设置toolbar的标题，显示当前时间
+        //设置toolbar的标题，显示当前时间 ok
         setTitle(getTime());
 
         //添加Adapter 加入单个item
@@ -87,7 +87,7 @@ public class MainActivity extends Activity implements
 
         if(id == R.id.action_favorite){
             //跳转到FavoriteActivity
-            Intent i = new Intent(this,FavoriteActivity.class);
+            Intent i = new Intent(this,FavouriteActivity.class);
             startActivity(i);
             return true;
         }

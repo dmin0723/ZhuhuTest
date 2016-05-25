@@ -13,16 +13,17 @@ import java.io.IOException;
 
 /**
  * Created by dmin on 2016/5/24.
+ * 与Http对应，解析相应的HTML代码
  */
 public class LoadNewsDetailTask extends AsyncTask<Integer,Void,NewsDetail>{
 
     private WebView mWebView;
 
-    public LoadNewsDetailTask(WebView webView) {
-        mWebView = webView;
+    public LoadNewsDetailTask(WebView mWebView) {
+        this.mWebView = mWebView;
     }
 
-    //必须具备的
+    //必须具备的 解析和下载json
     @Override
     protected NewsDetail doInBackground(Integer... params) {
         NewsDetail mNewsDetail = null;
@@ -34,13 +35,6 @@ public class LoadNewsDetailTask extends AsyncTask<Integer,Void,NewsDetail>{
             return mNewsDetail;
         }
     }
-
-    //暂时不写先，5.24
-//    @Override
-//    protected void onPostExecute(NewsDetail newsDetail) {
-//        super.onPostExecute(newsDetail);
-//    }
-
     //复制过来
     @Override
     protected void onPostExecute(NewsDetail mNewsDetail) {
@@ -70,4 +64,11 @@ public class LoadNewsDetailTask extends AsyncTask<Integer,Void,NewsDetail>{
                 + mNewsDetail.getBody().replace("<div class=\"img-place-holder\">", sb.toString());
         mWebView.loadDataWithBaseURL("file:///android_asset/", mNewsContent, "text/html", "UTF-8", null);
     }
+
+    //暂时不写先，5.24
+//    @Override
+//    protected void onPostExecute(NewsDetail newsDetail) {
+//        super.onPostExecute(newsDetail);
+//    }
+
 }

@@ -5,7 +5,7 @@
               android:orientation="vertical">
 
     <ListView
-        android:id="@+id/lv_favorite"
+        android:id="@+id/lv_favourite"
         style="@style/NewsListStyle"
         android:layout_width="match_parent"
         android:layout_height="match_parent"/>

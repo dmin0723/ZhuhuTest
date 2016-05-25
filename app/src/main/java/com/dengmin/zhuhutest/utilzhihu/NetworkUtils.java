@@ -19,6 +19,7 @@ public class NetworkUtils {
         return activityNetwork != null && activityNetwork.isConnected();
     }
 
+
     public static void notNetworkAlert(Context context){
         T.showShort(context, R.string.not_network);
     }

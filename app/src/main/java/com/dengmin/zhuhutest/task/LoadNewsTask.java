@@ -16,6 +16,7 @@ import java.util.List;
  * Created by dmin on 2016/5/23.
  * 下载图片是使用了异步操作 ，执行了网络方面的解析
  */
+//此处报错
 public class LoadNewsTask extends AsyncTask<Void,Void,List<News>>{
 
     private NewsAdapter adapter;
@@ -34,6 +35,8 @@ public class LoadNewsTask extends AsyncTask<Void,Void,List<News>>{
         this.listener = listener;
     }
 
+    //在子线程中运行耗时工作 更新UI的话要调用publishProgress（Progress…）来完成
+    //doInBackground 的与开头的泛型一致
     @Override
     protected List<News> doInBackground(Void... params) {
         List<News> newsList = null;
@@ -51,8 +54,8 @@ public class LoadNewsTask extends AsyncTask<Void,Void,List<News>>{
     //onPostExecute(List<News> newsList) 的与开头的泛型一致
     @Override
     protected void onPostExecute(List<News> newsList) {
-        super.onPostExecute(newsList);
-
+        //  //空也报错 ？此处报错
+        adapter.refreshNewsList(newsList);//这个没有写 此处报错
         //有的构造函数不存在接口的使用，故需要加上判断
         if (listener != null){
             listener.afterTaskFinish();
@@ -61,6 +64,6 @@ public class LoadNewsTask extends AsyncTask<Void,Void,List<News>>{
 
     //接口的定义，目的是提示列表已刷新完成，更改列表的状态
     public interface onFinishListener{
-        void afterTaskFinish();
+       void afterTaskFinish();
     }
 }

@@ -7,9 +7,11 @@ import java.io.Serializable;
  * 这是新闻列表
  */
 public class News implements Serializable{
+
     private int id;
     private String title;
     private String image;
+
 
     public News(){
     }

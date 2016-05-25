@@ -17,7 +17,6 @@ import java.util.List;
  * 没有问题
  */
 public class JsonHelper {
-
     //与第一行代码有点不一样，后续继续试验
     //没有使用到Gson这个第三方库，后续进行优化
     public static List<News> parseJsonToList(String json) throws JSONException{
@@ -34,7 +33,7 @@ public class JsonHelper {
             int id = newsInJson.optInt("id");
             String title = newsInJson.optString("title");
             String image = "";
-            if(newsInJson.has("image")){
+            if(newsInJson.has("images")){ //原来为images
                 image = (String)newsInJson.getJSONArray("images").get(0);
             }
             //单个新闻的初始化
@@ -49,5 +48,4 @@ public class JsonHelper {
         Gson gson = new Gson();
         return gson.fromJson(json,NewsDetail.class);
     }
-
 }

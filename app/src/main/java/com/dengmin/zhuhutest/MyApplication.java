@@ -20,6 +20,7 @@ public class MyApplication extends Application{
 
     //初始化ImageLoader
     public static void initImageLoader(Context context) {
+        //创建ImageLoader配置参数
         ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(context)
                 .denyCacheImageMultipleSizesInMemory()
                 .threadPriority(Thread.NORM_PRIORITY - 2)

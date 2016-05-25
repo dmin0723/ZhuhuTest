@@ -39,7 +39,7 @@ public class DailyNewsDB {
     }
 
     //添加数据 使用了类表新闻类
-    public void saveFavorite(News news){
+    public void saveFavourite(News news){
         if(news != null){
             ContentValues values = new ContentValues();
             values.put(DBHelper.COLUMN_NEWS_ID,news.getId());//键值对
@@ -50,16 +50,16 @@ public class DailyNewsDB {
     }
 
     //删除相应的数据
-    public void deleteFavorite(News news){
+    public void deleteFavourite(News news){
         if(news != null){
             db.delete(DBHelper.TABLE_NAME,DBHelper.COLUMN_NEWS_ID + "=?"
                     ,new String[]{news.getId() +""});
         }
     }
 
-    //使用了查询数据库
-    public List<News> loadFavorite(){
-        List<News> favoriteList = new ArrayList<News>();
+    //使用了查询数据库 这是添加收藏列表 之前漏了这个
+    public List<News> loadFavourite(){
+        List<News> favouriteList = new ArrayList<News>();
         Cursor cursor = db.query(DBHelper.TABLE_NAME,null,null,null,null,null,null);
         if(cursor.moveToFirst()){
             do{
@@ -67,19 +67,19 @@ public class DailyNewsDB {
                 news.setId(cursor.getInt(1));
                 news.setTitle(cursor.getString(2));
                 news.setImage(cursor.getString(3));
+                favouriteList.add(news);//漏了这个 这是添加收藏列表
             }while(cursor.moveToNext());
         }
         cursor.close();
-        return favoriteList;
+        return favouriteList;//书写错误
     }
 
     //是否喜欢，加入相应的数列
     //暂时不理解作用？
-    public boolean isFavorite(News news){
+    public boolean isFavourite(News news){
         Cursor cursor = db.query(DBHelper.TABLE_NAME,null,
-                DBHelper.COLUMN_NEWS_ID + "=?",
-                new String[]{news.getId() + ""},null,null,null);
-
+                DBHelper.COLUMN_NEWS_ID + "=?", new String[]{news.getId() + ""},
+                null,null,null);
         //光标的位置的最后
         if(cursor.moveToNext()){
             cursor.close();

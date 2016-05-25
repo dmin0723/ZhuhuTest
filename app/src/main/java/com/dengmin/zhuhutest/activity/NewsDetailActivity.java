@@ -42,7 +42,7 @@ public class NewsDetailActivity extends Activity{
         new LoadNewsDetailTask(mWebView).execute(news.getId());
 
         //是否为喜欢的 暂时不理解作用？
-        isFavorite = DailyNewsDB.getInstance(this).isFavorite(news);
+        isFavorite = DailyNewsDB.getInstance(this).isFavourite(news);
     }
 
     private void setWebView(WebView mWebView) {
@@ -90,11 +90,11 @@ public class NewsDetailActivity extends Activity{
 
         if(id == R.id.action_favorite){
             if(!isFavorite){
-                DailyNewsDB.getInstance(this).saveFavorite(news);
+                DailyNewsDB.getInstance(this).saveFavourite(news);
                 item.setIcon(R.drawable.fav_active);
                 isFavorite = true;
             }else{
-                DailyNewsDB.getInstance(this).deleteFavorite(news);
+                DailyNewsDB.getInstance(this).deleteFavourite(news);
                 item.setIcon(R.drawable.fav_normal);
                 isFavorite = false;
             }

@@ -16,26 +16,26 @@ import java.util.List;
 /**
  * Created by dmin on 2016/5/24.
  */
-public class FavoriteActivity extends Activity implements AdapterView.OnItemClickListener {
+public class FavouriteActivity extends Activity implements AdapterView.OnItemClickListener {
 
     private NewsAdapter adapter;
-    private List<News> favoriteList;
-    private ListView lvFavorite;
+    private List<News> favouriteList;
+    private ListView lvFavourite;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.favorite);
+        setContentView(R.layout.favourite);
 
-        lvFavorite = (ListView) findViewById(R.id.lv_favorite);
+        lvFavourite = (ListView) findViewById(R.id.lv_favourite);
 
         //显示收藏列表
-        favoriteList = DailyNewsDB.getInstance(this).loadFavorite();//报错1
+        favouriteList = DailyNewsDB.getInstance(this).loadFavourite();//报错1 这是添加收藏列表
 
         //添加adapter
-        adapter = new NewsAdapter(this,R.layout.listview_item,favoriteList);
-        lvFavorite.setAdapter(adapter);
-        lvFavorite.setOnItemClickListener(this);
+        adapter = new NewsAdapter(this,R.layout.listview_item,favouriteList);
+        lvFavourite.setAdapter(adapter);
+        lvFavourite.setOnItemClickListener(this);
     }
 
     @Override

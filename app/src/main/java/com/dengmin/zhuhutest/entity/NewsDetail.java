@@ -40,6 +40,7 @@ public class NewsDetail {
     private ArrayList<String> js;//可以不用
     private int type;//可以不用
     private String ga_prefix;//可以不用
+
     private long id;
     private ArrayList<String> css;
 
