@@ -15,8 +15,7 @@ import com.dengmin.zhuhutest.task.LoadNewsDetailTask;
 import com.dengmin.zhuhutest.utilzhihu.NetworkUtils;
 
 /**
- * Created by dmin on 2016/5/23.
- * 新闻内容的详情
+ * 具体的新闻内容的详情
  */
 public class NewsDetailActivity extends Activity{
     private WebView mWebView;
@@ -84,7 +83,10 @@ public class NewsDetailActivity extends Activity{
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if(id == R.id.action_setting){
+        if(id == R.id.action_about){
+            //跳转到AboutActivity
+            Intent i = new Intent(this,AboutActivity.class);
+            startActivity(i);
             return true;
         }
 

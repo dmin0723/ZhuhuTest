@@ -31,6 +31,7 @@
         </activity>
 
         <activity android:name=".activity.NewsDetailActivity"
+                  android:label="@string/zhihu_daily"
                   android:parentActivityName=".activity.MainActivity">
             <!--Set Parent Activity-->
             <meta-data android:name="android.support.PARENT_ACTIVITY"
@@ -39,6 +40,14 @@
 
         <activity android:name=".activity.FavouriteActivity"
                   android:label="@string/favorite"
+                  android:parentActivityName=".activity.MainActivity">
+            <!--Set Parent Activity-->
+            <meta-data android:name="android.support.PARENT_ACTIVITY"
+                       android:value=".activity.MainActivity"/>
+        </activity>
+
+        <activity android:name=".activity.AboutActivity"
+                  android:label="@string/action_about"
                   android:parentActivityName=".activity.MainActivity">
             <!--Set Parent Activity-->
             <meta-data android:name="android.support.PARENT_ACTIVITY"

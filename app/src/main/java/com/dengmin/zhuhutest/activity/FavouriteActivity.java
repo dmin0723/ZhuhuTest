@@ -14,7 +14,7 @@ import com.dengmin.zhuhutest.entity.News;
 import java.util.List;
 
 /**
- * Created by dmin on 2016/5/24.
+ * 收藏页面
  */
 public class FavouriteActivity extends Activity implements AdapterView.OnItemClickListener {
 

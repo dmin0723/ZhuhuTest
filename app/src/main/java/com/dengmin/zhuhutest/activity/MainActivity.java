@@ -81,8 +81,11 @@ public class MainActivity extends Activity implements
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if(id == R.id.action_setting){
-            return true;//没有设置相应的跳转
+        if(id == R.id.action_about){
+            //跳转到AboutActivity
+            Intent i = new Intent(this,AboutActivity.class);
+            startActivity(i);
+            return true;
         }
 
         if(id == R.id.action_favorite){
