@@ -37,7 +37,7 @@ public class NewsDetail {
     private String image;//头部图片
     private String share_url;
 
-    private ArrayList<String> js;//可以不用
+    private ArrayList<String> js;//可以不用 没有用到
     private int type;//可以不用
     private String ga_prefix;//可以不用
 

@@ -75,7 +75,7 @@ public class DailyNewsDB {
     }
 
     //是否喜欢，加入相应的数列
-    //暂时不理解作用？
+    //暂时不理解作用？ 在数据库中判断此页面是否为收藏的
     public boolean isFavourite(News news){
         Cursor cursor = db.query(DBHelper.TABLE_NAME,null,
                 DBHelper.COLUMN_NEWS_ID + "=?", new String[]{news.getId() + ""},

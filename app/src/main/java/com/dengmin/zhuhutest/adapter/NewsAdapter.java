@@ -37,14 +37,14 @@ public class NewsAdapter extends ArrayAdapter<News>{
             .considerExifParams(true)// 保留图片文件头信息
             .build();
 
-    //构造函数为必须的 使用在新闻列表中
+    //构造函数为必须重写 使用在新闻列表中
     public NewsAdapter(Context context, int resource) {
         super(context, resource);
         mInflater = LayoutInflater.from(context);//没有使用this
         this.resource = resource;
     }
 
-    //构造函数为必须的 使用在收藏列表中
+    //构造函数为必须重写 使用在收藏列表中
     public NewsAdapter(Context context, int resource, List<News> objects) {
         super(context, resource, objects);
         mInflater = LayoutInflater.from(context);
@@ -67,7 +67,7 @@ public class NewsAdapter extends ArrayAdapter<News>{
         News news = getItem(position);
 
         holder.newsTitle.setText(news.getTitle());
-        Log.d("Image URL", news.getImage());//此处没有显示Image 的 URL
+        Log.d("Image URL", news.getImage());//之前没有显示Image 的 URL 现在可以显示
         imageLoader.displayImage(news.getImage(),holder.newsImage,options);
 
         return convertView;

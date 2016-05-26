@@ -14,10 +14,6 @@ import java.net.URL;
 
     //这是参考了第一行代码的写法，也好比较好的封装类，可以直接使用
 public class Http {
-    //接口的api
-    public static String NEWSLIST_LATEST = "http://news-at.zhihu.com/api/4/news/latest";//在警告中，反应没有添加网址
-
-    public static String NEWSDETAIL = "http://news-at.zhihu.com/api/4/news/";
     //进行修改和优化，一般不要直接使用throws 来抛出异常
     // 原来是使用了throws IOException ,没有使用catch
     //与第一行代码有所区别
@@ -50,11 +46,11 @@ public class Http {
     }
 
     public static String getLastNewsList()throws IOException{
-        return get(NEWSLIST_LATEST);//警告 没有报错 原因是给没有连接网址
+        return get(Api.NEWSLIST_LATEST);//警告 没有报错 原因是给没有连接网址
     }
 
     public static String getNewsDetail(int id) throws IOException{
-        return get(NEWSDETAIL + id);
+        return get(Api.NEWSDETAIL + id);
     }
 
 

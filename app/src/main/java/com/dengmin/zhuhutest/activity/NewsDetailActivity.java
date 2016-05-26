@@ -35,12 +35,13 @@ public class NewsDetailActivity extends Activity{
 
         //使用Intent来传递对象 第一行代码 Serializable
         //与下面的startActivity（）有关
+        //得到具体的页面
         news = (News) getIntent().getSerializableExtra("news");
 
         //加载相应的页面 使用异步加载
         new LoadNewsDetailTask(mWebView).execute(news.getId());
 
-        //是否为喜欢的 暂时不理解作用？
+        //是否为喜欢的 得到具体的参数，用来是否收藏
         isFavorite = DailyNewsDB.getInstance(this).isFavourite(news);
     }
 

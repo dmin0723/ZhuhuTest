@@ -13,7 +13,7 @@ import java.util.List;
 
 /**
  * Created by dmin on 2016/5/23.
- * 将Http解析成的HTML语句看作成json，使用JsonHelper来解析json，从而显示出来
+ * 将Http解析成的HTML语句解析成json，使用JsonHelper来解析json，从而显示出来
  * 没有问题
  */
 public class JsonHelper {

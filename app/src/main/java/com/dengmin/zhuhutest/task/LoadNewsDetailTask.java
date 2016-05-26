@@ -35,13 +35,12 @@ public class LoadNewsDetailTask extends AsyncTask<Integer,Void,NewsDetail>{
             return mNewsDetail;
         }
     }
-    //复制过来
+    //复制过来 收尾工作
     @Override
     protected void onPostExecute(NewsDetail mNewsDetail) {
         String headerImage;
         if (mNewsDetail.getImage() == null || mNewsDetail.getImage() == "") {
             headerImage = "file:///android_asset/news_detail_header_image.jpg";//？怎么找到这个文件
-
         } else {
             headerImage = mNewsDetail.getImage();
         }

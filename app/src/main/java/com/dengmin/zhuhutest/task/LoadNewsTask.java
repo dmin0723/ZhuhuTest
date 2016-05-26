@@ -54,7 +54,7 @@ public class LoadNewsTask extends AsyncTask<Void,Void,List<News>>{
     //onPostExecute(List<News> newsList) 的与开头的泛型一致
     @Override
     protected void onPostExecute(List<News> newsList) {
-        //  //空也报错 ？此处报错
+        //
         adapter.refreshNewsList(newsList);//这个没有写 此处报错
         //有的构造函数不存在接口的使用，故需要加上判断
         if (listener != null){
