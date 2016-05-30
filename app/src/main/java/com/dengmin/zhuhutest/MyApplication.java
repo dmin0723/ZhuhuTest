@@ -8,7 +8,7 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 
 /**
- * Created by dmin on 2016/5/23.
+ * 配置universal-image-loader
  */
 public class MyApplication extends Application{
 

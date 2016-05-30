@@ -14,7 +14,7 @@ import com.dengmin.zhuhutest.entity.News;
 import java.util.List;
 
 /**
- * 收藏页面
+ * 收藏页面，显示收藏列表
  */
 public class FavouriteActivity extends Activity implements AdapterView.OnItemClickListener {
 

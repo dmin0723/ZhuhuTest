@@ -7,7 +7,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 /**
- * Created by dmin on 2016/5/23.
+ * Http解析
  * 将存入的网址，解析成HTML格式
  * 没有问题
  */

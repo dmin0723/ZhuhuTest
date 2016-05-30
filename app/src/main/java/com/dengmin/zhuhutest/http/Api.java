@@ -1,7 +1,7 @@
 package com.dengmin.zhuhutest.http;
 
 /**
- * Created by dmin on 2016/5/26.
+ * 对应知乎的api，方便后续扩展
  */
 public class Api {
     //这是相应的知乎日报的API

@@ -3,11 +3,11 @@ package com.dengmin.zhuhutest.entity;
 import java.util.ArrayList;
 
 /**
- * Created by dmin on 2016/5/23.
+ * 这是具体的新闻页面
  */
 public class NewsDetail {
-    //去查看相应的HTML页面，给到相应的解析 ?还没有去看
-    //与loadNewsDeailTask 有关联
+    //去查看相应的HTML页面，给到相应的解析 这是知乎api的解析
+    //与loadNewsDetailTask 有关联
     /**
      * body : <div class="main-wrap content-wrap"><p>致敬是对某个桥段，某几个镜头，某个造型，某段对话高度复制，属于表达导演对自己偶像的敬仰，一般只有资深影迷才会发现。</p>blah blah</div>
      * image_source : 《一步之遥》

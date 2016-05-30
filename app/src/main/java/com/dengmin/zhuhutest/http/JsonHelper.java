@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by dmin on 2016/5/23.
+ * json解析
  * 将Http解析成的HTML语句解析成json，使用JsonHelper来解析json，从而显示出来
  * 没有问题
  */

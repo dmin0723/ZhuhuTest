@@ -12,7 +12,6 @@ import org.json.JSONException;
 import java.io.IOException;
 
 /**
- * Created by dmin on 2016/5/24.
  * 与Http对应，解析相应的HTML代码
  */
 public class LoadNewsDetailTask extends AsyncTask<Integer,Void,NewsDetail>{
@@ -28,7 +27,7 @@ public class LoadNewsDetailTask extends AsyncTask<Integer,Void,NewsDetail>{
     protected NewsDetail doInBackground(Integer... params) {
         NewsDetail mNewsDetail = null;
         try{
-           mNewsDetail = JsonHelper.parseJsonToDetail(Http.getNewsDetail(params[0])) ;//为什么是0？
+           mNewsDetail = JsonHelper.parseJsonToDetail(Http.getNewsDetail(params[0])) ;//传入当前的id
         }catch (IOException | JSONException e){
 
         }finally {

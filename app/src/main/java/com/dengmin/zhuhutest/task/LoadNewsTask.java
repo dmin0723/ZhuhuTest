@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.util.List;
 
 /**
- * Created by dmin on 2016/5/23.
+ * 解析listView 使用异步操作
  * 下载图片是使用了异步操作 ，执行了网络方面的解析
  */
 //此处报错

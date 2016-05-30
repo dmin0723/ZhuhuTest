@@ -17,7 +17,8 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import java.util.List;
 
 /**
- * Created by dmin on 2016/5/23.
+ * 1、与ImageLoader有关，显示图片
+ * 2、刷新页面
  */
 
     //相应的定义，与选用的适配器有关 为了使用泛型

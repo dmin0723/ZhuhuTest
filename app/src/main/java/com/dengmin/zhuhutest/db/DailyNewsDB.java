@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by dmin on 2016/5/24.
+ * 收藏页面使用
  * 对数据库进行增删改查
  */
 public class DailyNewsDB {

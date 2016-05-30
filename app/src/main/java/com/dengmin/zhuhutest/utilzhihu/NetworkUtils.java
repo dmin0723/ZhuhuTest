@@ -8,7 +8,7 @@ import com.dengmin.zhuhutest.R;
 import com.dengmin.zhuhutest.utils.T;
 
 /**
- * Created by dmin on 2016/5/23.
+ * 网络的判断
  */
 public class NetworkUtils {
 

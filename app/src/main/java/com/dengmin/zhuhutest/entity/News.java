@@ -3,7 +3,6 @@ package com.dengmin.zhuhutest.entity;
 import java.io.Serializable;
 
 /**
- * Created by dmin on 2016/5/23.
  * 这是新闻列表
  */
 public class News implements Serializable{
