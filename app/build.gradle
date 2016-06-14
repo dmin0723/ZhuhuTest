@@ -25,4 +25,5 @@ dependencies {
     compile 'com.android.support:appcompat-v7:23.3.0'
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.3'
     compile 'com.google.code.gson:gson:2.3.1'
+    compile 'org.litepal.android:core:1.3.2' //这是数据库框架LitePal，用来替换原生的Sqlite
 }

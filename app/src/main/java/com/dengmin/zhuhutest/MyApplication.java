@@ -1,16 +1,17 @@
 package com.dengmin.zhuhutest;
 
-import android.app.Application;
 import android.content.Context;
 
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 
+import org.litepal.LitePalApplication;
+
 /**
  * 配置universal-image-loader
  */
-public class MyApplication extends Application{
+public class MyApplication extends LitePalApplication {
 
     @Override
     public void onCreate() {

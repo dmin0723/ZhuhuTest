@@ -9,7 +9,7 @@ import android.view.MenuItem;
 import android.webkit.WebView;
 
 import com.dengmin.zhuhutest.R;
-import com.dengmin.zhuhutest.db.DailyNewsDB;
+import com.dengmin.zhuhutest.db.DailyNewsLitePal;
 import com.dengmin.zhuhutest.entity.News;
 import com.dengmin.zhuhutest.task.LoadNewsDetailTask;
 import com.dengmin.zhuhutest.utilzhihu.NetworkUtils;
@@ -39,10 +39,10 @@ public class NewsDetailActivity extends Activity{
         news = (News) getIntent().getSerializableExtra("news");
 
         //加载相应的页面 使用异步加载
-        new LoadNewsDetailTask(mWebView).execute(news.getId());
+        new LoadNewsDetailTask(mWebView).execute(news.getNews_id());//需要对应的修改
 
         //是否为喜欢的 得到具体的参数，用来是否收藏
-        isFavorite = DailyNewsDB.getInstance(this).isFavourite(news);
+        isFavorite = DailyNewsLitePal.getInstance(this).isFavourite(news); //报错3-2
     }
 
     private void setWebView(WebView mWebView) {
@@ -93,11 +93,11 @@ public class NewsDetailActivity extends Activity{
 
         if(id == R.id.action_favorite){
             if(!isFavorite){
-                DailyNewsDB.getInstance(this).saveFavourite(news);
+                DailyNewsLitePal.getInstance(this).saveFavourite(news);
                 item.setIcon(R.drawable.fav_active);
                 isFavorite = true;
             }else{
-                DailyNewsDB.getInstance(this).deleteFavourite(news);
+                DailyNewsLitePal.getInstance(this).deleteFavourite(news);
                 item.setIcon(R.drawable.fav_normal);
                 isFavorite = false;
             }
@@ -105,4 +105,13 @@ public class NewsDetailActivity extends Activity{
         }
         return super.onOptionsItemSelected(item);
     }
+
+    //解决不了一旦点击就不能取消的问题
+//    @Override
+//    protected void onDestroy() {
+//        if(!isFavorite){
+//            DailyNewsLitePal.getInstance(this).deleteFavourite(news);
+//        }
+//        super.onDestroy();
+//    }
 }

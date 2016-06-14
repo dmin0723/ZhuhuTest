@@ -3,6 +3,7 @@ package com.dengmin.zhuhutest.task;
 import android.os.AsyncTask;
 import android.webkit.WebView;
 
+import com.dengmin.zhuhutest.R;
 import com.dengmin.zhuhutest.entity.NewsDetail;
 import com.dengmin.zhuhutest.http.Http;
 import com.dengmin.zhuhutest.http.JsonHelper;
@@ -14,7 +15,7 @@ import java.io.IOException;
 /**
  * 与Http对应，解析相应的HTML代码
  */
-public class LoadNewsDetailTask extends AsyncTask<Integer,Void,NewsDetail>{
+public class LoadNewsDetailTask extends AsyncTask<Integer,Void,NewsDetail>{ //报错2-2
 
     private WebView mWebView;
 
@@ -38,8 +39,9 @@ public class LoadNewsDetailTask extends AsyncTask<Integer,Void,NewsDetail>{
     @Override
     protected void onPostExecute(NewsDetail mNewsDetail) {
         String headerImage;
-        if (mNewsDetail.getImage() == null || mNewsDetail.getImage() == "") {
-            headerImage = "file:///android_asset/news_detail_header_image.jpg";//？怎么找到这个文件
+        if (mNewsDetail.getImage() == null || mNewsDetail.getImage() == "") {  //报错2-1
+            //已改变
+            headerImage = String.valueOf(R.drawable.fav_active);
         } else {
             headerImage = mNewsDetail.getImage();
         }

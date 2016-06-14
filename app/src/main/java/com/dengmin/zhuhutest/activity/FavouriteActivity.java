@@ -8,7 +8,7 @@ import android.widget.ListView;
 
 import com.dengmin.zhuhutest.R;
 import com.dengmin.zhuhutest.adapter.NewsAdapter;
-import com.dengmin.zhuhutest.db.DailyNewsDB;
+import com.dengmin.zhuhutest.db.DailyNewsLitePal;
 import com.dengmin.zhuhutest.entity.News;
 
 import java.util.List;
@@ -29,8 +29,8 @@ public class FavouriteActivity extends Activity implements AdapterView.OnItemCli
 
         lvFavourite = (ListView) findViewById(R.id.lv_favourite);
 
-        //显示收藏列表
-        favouriteList = DailyNewsDB.getInstance(this).loadFavourite();//报错1 这是添加收藏列表
+        //显示收藏列表 DailyNewsLitePal mDailyNewsLitePal
+        favouriteList = DailyNewsLitePal.getInstance(this).loadFavourite();//报错1 这是添加收藏列表
 
         //添加adapter
         adapter = new NewsAdapter(this,R.layout.listview_item,favouriteList);
